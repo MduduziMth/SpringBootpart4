@@ -9,7 +9,7 @@ public class User {
     private String name;
     private String surname;
 
-    public User(@JsonProperty("ID") long ID,@JsonProperty("name") String name,@JsonProperty("surname") String surname){
+    public User(long ID,String name, String surname){
         this.name=name;
         this.id = ID;
         this.surname=surname;

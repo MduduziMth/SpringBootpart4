@@ -1,5 +1,6 @@
 package springbootpart3;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -7,8 +8,8 @@ import org.springframework.stereotype.Service;
 public  class UserServiceImpl implements UserService {
 
 
-
-    FakeRepo fakeRepo=new FakeRepo();
+    @Autowired
+    FakeRepo fakeRepo;
 
 
     public String addUser(long id,String name, String surname) {
